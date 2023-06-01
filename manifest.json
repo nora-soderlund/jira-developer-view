@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Jira Developer View",
+    "version": "0.9.0",
+    "description": "Disables inline editing and replaces it with a button, allowing for semi-regular user select events.",
+    "permissions": [
+        "<all_urls>"
+    ],
+    "background": {
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.atlassian.net/jira/*",
+                "*://*.atlassian.net/browse/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
